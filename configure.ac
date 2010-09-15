@@ -19,7 +19,7 @@ fi
 
 
 AC_MSG_CHECKING([Ruby version])
-RUBYVERS=`${RUBY} --version | cut -d" " -f2`
+RUBYVERS=`${RUBY} --version | head -n 1 | cut -d" " -f2`
 AC_MSG_RESULT($RUBYVERS)
 RUBYVERS=`echo ${RUBYVERS} | tr -d .`
 if test $RUBYVERS -ge 190; then
