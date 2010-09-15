@@ -1,7 +1,7 @@
 require 'date'
 Gem::Specification.new do |s|
   s.name = %q{rmagick}
-  s.version = "0.0.0"
+  s.version = "1.15.17.1"
   s.date = Date.today.to_s
   s.summary = %q{RMagick is an interface between the Ruby programming language and the ImageMagick and GraphicsMagick image processing libraries.}
   s.description =<<DESCRIPTION
