@@ -180,6 +180,11 @@ typedef enum _QuantumExpressionOperator
 } QuantumExpressionOperator ;
 #endif
 
+// ImageMagick 6.5.7 replaced DestroyConstitute with ConstituteComponentTerminus
+// Both have the same signature.
+#if defined(HAVE_CONSTITUTECOMPONENTTERMINUS)
+    #define DestroyConstitute(void) ConstituteComponentTerminus(void)
+#endif
 
 /*
     ImageMagick used simply size_t and off_t in 5.5.1, then defined the

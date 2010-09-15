@@ -13,5 +13,7 @@ $LOCAL_LIBS = "@LOCAL_LIBS@"
 # rmagick_config.h changed.
 $config_h = 'Makefile rmagick_config.h'
 
+have_func("ConstituteComponentTerminus", "wand/MagickWand.h")
+
 create_makefile("RMagick")
 
