@@ -45,12 +45,12 @@
 // 1.6 and 1.8 alternatives. Code enclosed in RUBY18()
 // is present when compiled for 1.8.0 and later. Code
 // enclosed in RUBY16 is present for 1.6 versions.
-#if RUBY_VERSION >= 0x180
-#define RUBY18(d) d
-#define RUBY16(d)
-#else
+#if RUBY_VERSION < 0x180
 #define RUBY18(d)
 #define RUBY16(d) d
+#else
+#define RUBY18(d) d
+#define RUBY16(d)
 #endif
 
 // Backport these definitions to Ruby 1.6.7
