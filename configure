@@ -3042,7 +3042,7 @@ fi
 
 { echo "$as_me:$LINENO: checking Ruby version" >&5
 echo $ECHO_N "checking Ruby version... $ECHO_C" >&6; }
-RUBYVERS=`${RUBY} --version | cut -d" " -f2`
+RUBYVERS=`${RUBY} --version | head -n 1 | cut -d" " -f2`
 { echo "$as_me:$LINENO: result: $RUBYVERS" >&5
 echo "${ECHO_T}$RUBYVERS" >&6; }
 RUBYVERS=`echo ${RUBYVERS} | tr -d .`
@@ -10836,7 +10836,7 @@ fi
 
 
 
-RUBY_VERSION_STRING=`$RUBY --version`
+RUBY_VERSION_STRING=`$RUBY --version | head -n 1`
 cat >>confdefs.h <<_ACEOF
 #define RUBY_VERSION_STRING "$RUBY_VERSION_STRING"
 _ACEOF
